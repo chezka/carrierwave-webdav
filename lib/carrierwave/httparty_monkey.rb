@@ -13,7 +13,7 @@ module HTTParty
   module ClassMethods
     # Perform a MKCOL request to a path
     def mkcol(path, options = {}, &block)
-      perform_request Net::HTTP::Mkcol, path, options, &block
+      perform_request Net::HTTP::Mkcol, "#{path}/", options, &block
     end
   end
 
